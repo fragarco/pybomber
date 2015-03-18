@@ -12,8 +12,8 @@ class Base(pygame.sprite.Sprite):
 	def init(self, type):
 		if not Base.images:
 			Base.images = {
-				"YELOW" : Loader.load_pixmap("rsc/base1.png"),
-				"ORANGE" : Loader.load_pixmap("rsc/base2.png")
+				"YELOW" : Loader.load_pixmap("rsc/sprites/base1.png"),
+				"ORANGE" : Loader.load_pixmap("rsc/sprites/base2.png")
 			 	}
 
 		self.image = Base.images[type]
@@ -28,8 +28,8 @@ class Floor(pygame.sprite.Sprite):
 	def init(self, type):
 		if not Floor.images:
 			Floor.images = {
-				"YELOW" : Loader.load_pixmap("rsc/floor1.png"),
-				"ORANGE" : Loader.load_pixmap("rsc/floor2.png")
+				"YELOW" : Loader.load_pixmap("rsc/sprites/floor1.png"),
+				"ORANGE" : Loader.load_pixmap("rsc/sprites/floor2.png")
 			 	}
 		self.image = Floor.images[type]
 		self.rect = self.image.get_rect()
@@ -44,9 +44,9 @@ class Plane(pygame.sprite.Sprite):
 	def init(self):
 		if not Plane.images:
 			Plane.images = [
-				Loader.load_png("rsc/plane1.png"),
-				Loader.load_png("rsc/plane2.png"),
-				Loader.load_png("rsc/plane3.png")
+				Loader.load_png("rsc/animations/plane/plane1.png"),
+				Loader.load_png("rsc/animations/plane/plane2.png"),
+				Loader.load_png("rsc/animations/plane/plane3.png")
 				]
 		self.image_ind = 0
 		self.rect = Plane.images[0].get_rect()
@@ -78,11 +78,11 @@ class Explosion(pygame.sprite.Sprite):
 	def init(self):
 		if not Explosion.images:
 			Explosion.images = [
-				Loader.load_png("rsc/exp1.png"),
-				Loader.load_png("rsc/exp2.png"),
-				Loader.load_png("rsc/exp3.png"),
-				Loader.load_png("rsc/exp4.png"),
-				Loader.load_png("rsc/exp5.png")
+				Loader.load_png("rsc/animations/explosion/exp1.png"),
+				Loader.load_png("rsc/animations/explosion/exp2.png"),
+				Loader.load_png("rsc/animations/explosion/exp3.png"),
+				Loader.load_png("rsc/animations/explosion/exp4.png"),
+				Loader.load_png("rsc/animations/explosion/exp5.png")
 				]
 		self.image_ind = 0
 		self.rect = Explosion.images[0].get_rect()
@@ -107,7 +107,7 @@ class Bomb(pygame.sprite.Sprite):
 
 	def init(self, x, y):
 		if not Bomb.image:
-			Bomb.image = Loader.load_png("rsc/bomb.png")
+			Bomb.image = Loader.load_png("rsc/sprites/bomb.png")
 		self.image = Bomb.image
 		self.rect = self.image.get_rect()
 		self.rect.left = x
