@@ -12,10 +12,10 @@ class Base(pygame.sprite.Sprite):
 	def init(self, type):
 		if not Base.images:
 			Base.images = {
-				"YELOW" : Loader.load_pixmap("rsc/sprites/base1.png"),
+				"WHITE" : Loader.load_pixmap("rsc/sprites/base0.png"),
+				"YELLOW" : Loader.load_pixmap("rsc/sprites/base1.png"),
 				"ORANGE" : Loader.load_pixmap("rsc/sprites/base2.png")
 			 	}
-
 		self.image = Base.images[type]
 		self.rect = self.image.get_rect()
 
@@ -28,7 +28,8 @@ class Floor(pygame.sprite.Sprite):
 	def init(self, type):
 		if not Floor.images:
 			Floor.images = {
-				"YELOW" : Loader.load_pixmap("rsc/sprites/floor1.png"),
+				"WHITE" : Loader.load_pixmap("rsc/sprites/floor0.png"),
+				"YELLOW" : Loader.load_pixmap("rsc/sprites/floor1.png"),
 				"ORANGE" : Loader.load_pixmap("rsc/sprites/floor2.png")
 			 	}
 		self.image = Floor.images[type]

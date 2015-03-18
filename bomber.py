@@ -56,11 +56,9 @@ class MyGame(Viewer):
 			group.empty()
 			base = sprites.Base()
 
-			key = "ORANGE"
-			if random.randint(0,2) == 0:
-				key = ("YELOW")
-
-			base.init(key)
+			key = ["WHITE","YELLOW","ORANGE"]
+			type = random.randint(0,2)
+			base.init(key[type])
 			base_width = base.rect.width
 			base_height = base.rect.height
 			base.rect.move_ip(base_width * i, MyGame.Height - base_height - 10)
@@ -69,7 +67,7 @@ class MyGame(Viewer):
 			h = random.randint(1,8)
 			for j in xrange(0,h):
 				floor = sprites.Floor()
-				floor.init(key)
+				floor.init(key[type])
 				floor.rect.move_ip(base_width*i, 490 - base_height*j)
 				group.add(floor)
 
