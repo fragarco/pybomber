@@ -1,7 +1,7 @@
 import pygame
 
-from viewer import Viewer
-from loader import Loader
+from .viewer import Viewer
+from .loader import Loader
 
 class Base(pygame.sprite.Sprite):
 	images = {}
@@ -65,7 +65,7 @@ class Plane(pygame.sprite.Sprite):
 			self.rect.left = Viewer.Width
 			self.rect.top += self.rect.height
 
-		self.image_ind = (self.playing_time / 150) % 3
+		self.image_ind = int((self.playing_time / 150) % 3)
 		self.image = Plane.images[self.image_ind]
 		self.playing_time += time_passed
 
@@ -92,7 +92,7 @@ class Explosion(pygame.sprite.Sprite):
 
 
 	def update(self, time_passed):
-		self.image_ind = self.playing_time / 150
+		self.image_ind = int(self.playing_time / 150)
 		self.playing_time += time_passed
 		try:
 			self.image = Explosion.images[self.image_ind]

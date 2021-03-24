@@ -18,7 +18,7 @@ class MyGame(Viewer):
 		self.buildings = []
 		self.in_menu = True
 
-		for i in xrange(0,10):
+		for i in range(0,10):
 			self.buildings.append(pygame.sprite.Group())
 		self.explosions = pygame.sprite.Group()
 		self.bombs = pygame.sprite.Group()
@@ -64,7 +64,7 @@ class MyGame(Viewer):
 			group.add(base)
 
 			h = random.randint(1,8)
-			for j in xrange(0,h):
+			for j in range(0,h):
 				floor = sprites.Floor()
 				floor.init(key[type])
 				floor.rect.move_ip(base_width*i, 490 - base_height*j)

@@ -13,8 +13,8 @@ class Loader(object):
 	def load_pixmap(filename):
 		try:
 			image = pygame.image.load(filename).convert()
-		except pygame.error, message:
-			raise SystemExit, message
+		except pygame.error as e:
+			raise SystemExit
 	
 		return image
 
@@ -29,8 +29,8 @@ class Loader(object):
 	def load_png(filename):
 		try:
 			image = pygame.image.load(filename).convert_alpha()
-		except pygame.error, message:
-			raise SystemExit, message
+		except pygame.error as e:
+			raise SystemExit
 	
 		return image
 
@@ -38,8 +38,8 @@ class Loader(object):
 	def load_font(filename, size):
 		try:
 			font = pygame.font.Font(filename, size)
-		except pygame.error, message:
-			raise SystemExit, message
+		except pygame.error as e:
+			raise SystemExit
 	
 		return font
 
@@ -50,8 +50,8 @@ class Loader(object):
 
 		try:
 			sound = pygame.mixer.Sound(filename)
-		except pygame.error, message:
-			raise SystemExit, message
+		except pygame.error as e:
+			raise SystemExit
 
 		return sound
 
