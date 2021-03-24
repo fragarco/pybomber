@@ -15,3 +15,8 @@ Thumbs.db
 # Python virtual env #
 ######################
 pyenv
+
+# Pyinstaller dirs   #
+######################
+dist
+build
