@@ -16,7 +16,8 @@ Thumbs.db
 ######################
 pyenv
 
-# Pyinstaller dirs   #
+# Pyinstaller stuff   #
 ######################
 dist
 build
+*.spec
