@@ -24,16 +24,16 @@ class MyGame(Viewer):
 		self.bombs = pygame.sprite.Group()
 
 	def load_rsc(self):
-		self.bkg = Loader.load_pixmap("rsc/stills/bkg.png")
+		self.bkg = Loader.load_pixmap("assets/stills/bkg.png")
 		self.bkg_rect = self.bkg.get_rect()
-		self.menu = Loader.load_png("rsc/text/main.png")
+		self.menu = Loader.load_png("assets/text/main.png")
 		self.menu_rect = self.menu.get_rect()
-		self.end = Loader.load_png("rsc/text/end.png")
+		self.end = Loader.load_png("assets/text/end.png")
 		self.end_rect = self.end.get_rect()
 
-		self.exp_sound = Loader.load_sound("rsc/sound/explosion.wav")
+		self.exp_sound = Loader.load_sound("assets/sound/explosion.wav")
 		self.exp_sound.set_volume(0.15)
-		pygame.mixer.music.load("rsc/sound/bkg.wav")
+		pygame.mixer.music.load("assets/sound/bkg.wav")
 		pygame.mixer.music.set_volume(0.2)
 		pygame.mixer.music.play(-1)
 
